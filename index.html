@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commerce factory</title>
+    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap">
+    <script src="https://kit.fontawesome.com/3ae69ed52d.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    
+    <header class="header">
+        <nav class="navigation">
+            <p class="navigation__logo">Commerce factory</p>
+            <div class="no-pc">
+                <div onclick="burgerMenu()" class="mobile-navigation">
+                    <i id="mobile-burger__icon" class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="no-mobile">
+                <section class="nav-menu">
+                    <div class="nav-item">
+                        <div class="dropdown-label">
+                            <p class="menu__paragraph">Home</p>
+                        </div>         
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown-label">
+                            <p class="menu__paragraph">Shop</p><i class="fas fa-angle-down"></i>
+                        </div>    
+                        <div class="dropdown-list">
+                            <a class="dropdown-item menu__paragraph" href="#">Item 1</a>
+                            <a class="dropdown-item menu__paragraph" href="#">Item 2</a>
+                            <a class="dropdown-item menu__paragraph" href="#">Item 3</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown-label">
+                            <p class="menu__paragraph">Products</p><i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="dropdown-list">
+                            <a class="dropdown-item menu__paragraph" href="#">Product 1</a>
+                            <a class="dropdown-item menu__paragraph" href="#">Product 2</a>
+                            <a class="dropdown-item menu__paragraph" href="#">Product 3</a>
+                            <a class="dropdown-item menu__paragraph" href="#">Product 4</a>
+                            <a class="dropdown-item menu__paragraph" href="#">Product 5</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown-label">
+                            <p class="menu__paragraph">Blog</p><i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="dropdown-list">
+                            <a class="dropdown-item menu__paragraph" href="#">Blog 1</a>
+                            <a class="dropdown-item menu__paragraph" href="#">Blog 2</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <div class="dropdown-label">
+                            <p class="menu__paragraph">Pages</p><i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="dropdown-list">
+                            <a class="dropdown-item menu__paragraph" href="#">Page 1</a>
+                            <a class="dropdown-item menu__paragraph" href="#">Page 2</a>
+                            <a class="dropdown-item menu__paragraph" href="#">Page 3</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="no-mobile">
+                <section class="nav-menu">
+                    <div class="nav-item">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <div class="nav-item">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </section>
+            </div>   
+        </nav>
+        <div class="wrapper no-pc">
+            <div id="mobile-burger" class="js-burger-menu">
+
+                <section class="burger-menu">
+
+                        <div class="burger-menu-item-display burger-menu-item-sizing">
+                            <i class="fas fa-search"></i>
+                            <p class="menu__paragraph">search</p>
+                        </div>
+                        
+                        <div class="burger-menu-item-display burger-menu-item-sizing">
+                            <i class="fas fa-user"></i>
+                            <p class="menu__paragraph">user</p>
+                        </div>
+    
+                        <div class="burger-menu-item-display burger-menu-item-sizing">
+                            <i class="fas fa-heart"></i>
+                            <p class="menu__paragraph">favorites</p>
+                        </div>
+    
+                        <div class="burger-menu-item-display burger-menu-item-sizing">
+                            <i class="fas fa-shopping-cart"></i>
+                            <p class="menu__paragraph">shopping cart</p>
+                        </div>
+                        
+                </section>
+    
+                <section class="burger-menu">
+    
+                    <div class="burger-menu-item-display burger-menu-item-sizing">          
+                        <p class="menu__paragraph">Home</p>
+                    </div>
+
+                    <div class="burger-menu-item-display--dropdown-menu burger-menu-item-sizing">
+                        <p onclick="burgerMenuSubHeader(event)" class="menu__paragraph">Shop</p><i onclick="burgerMenuSubHeader(event)"  class="fas fa-angle-down"></i>
+                    </div>
+    
+                            <div class="mobile-empty">
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Item 1</a>
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Item 2</a>
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Item 3</a>
+                            </div>
+    
+                            <div class="burger-menu-item-display--dropdown-menu burger-menu-item-sizing">
+                                <p onclick="burgerMenuSubHeader(event)" class="menu__paragraph">Products</p><i onclick="burgerMenuSubHeader(event)"  class="fas fa-angle-down"></i>
+                            </div>
+
+                            <div class="mobile-empty">
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Product 1</a>
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Product 2</a>
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Product 3</a>
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Product 4</a>
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Product 5</a>
+                            </div>
+
+                            <div onclick="burgerMenuSubHeader(event)" class="burger-menu-item-display--dropdown-menu burger-menu-item-sizing">
+                                <p class="menu__paragraph">Blog</p><i class="fas fa-angle-down"></i>
+                            </div>
+
+                            <div class="mobile-empty">
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Blog 1</a>
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Blog 2</a>
+                            </div>
+                        
+                            <div onclick="burgerMenuSubHeader(event)" class="burger-menu-item-display--dropdown-menu burger-menu-item-sizing">
+                                <p class="menu__paragraph">Pages</p><i class="fas fa-angle-down"></i>
+                            </div>
+
+                            <div class="mobile-empty">
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Page 1</a>
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Page 2</a>
+                                <a class="burger-menu-item-display menu__paragraph burger-menu-item-sizing" href="#">Page 3</a>
+                            </div>
+                        
+                </section>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="main-block">
+
+        <section class="slider">
+
+            <div class="arrow-click-area" onclick="minusCounter()">
+                <i class="fas fa-angle-left"></i>
+            </div>
+
+            <div id="slider"></div>
+
+            <div class="arrow-click-area" onclick="plusCounter()">
+
+                <i class="fas fa-angle-right"></i>
+
+            </div>
+
+        </section>
+
+        <section class="shopping-section-block">
+            <div class="shopping-headers">
+                <p class="shopping-header-active">New</p>
+                <p class="shopping-header">Popular</p>
+                <p class="shopping-header">Sale</p>
+            </div>
+            <div class="shopping-list">
+                <div class="shopping-item">
+                    <div class="shopping-item_image-wrapper">
+                        <div class="image-container">
+                            <div class="image_discount-tag-big-sale-wrapper">
+                                <div class="image_discount-tag-big-sale-container">
+                                    <p>BIG SALE</p>
+                                </div>
+                            </div>
+                            <div class="shopping-item__actions-wrapper">
+                                <div class="shopping-item__actions-container">
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-share"></i>
+                                    </div>
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping-item__other-wrapper">
+                                <div class="shopping-item__other-container">
+                                    <div class="shopping-item__sizes-wrapper">
+                                        <div class="shopping-item__sizes">
+                                            <p class="shopping-item__size">S</p>
+                                            <p class="shopping-item__size">M</p>
+                                            <p class="shopping-item__size">L</p>
+                                            <p class="shopping-item__size">XL</p>
+                                        </div>
+                                        <div class="shopping-item__previews">
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image1.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="ima">
+                                            </picture>
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image1.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="">
+                                            </picture>
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image1.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="./images/image1.png" class="shopping-image_image" alt="">
+                            <div class="add-item__wrapper">
+                                <div class="add-item">Add item</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="shopping-item__header">Name 1</div>
+                        <div class="shopping-item__pricing">
+                            <p class="shopping-item__discount">$100</p>
+                            <p class="shopping-item__price">$100</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping-item">
+                    <div class="shopping-item_image-wrapper">
+                        <div class="image-container">
+                            <div class="image_discount-tag-fifteen-wrapper">
+                                <div class="image_discount-tag-fifteen-container">
+                                    <p>-15%</p>
+                                </div>
+                            </div>
+                            <div class="shopping-item__actions-wrapper">
+                                <div class="shopping-item__actions-container">
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-share"></i>
+                                    </div>
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="shopping-item__other-wrapper">
+                                <div class="shopping-item__other-container">
+                                    <div class="shopping-item__sizes-wrapper">
+                                        <div class="shopping-item__sizes">
+                                            <p class="shopping-item__size">S</p>
+                                            <p class="shopping-item__size">M</p>
+                                            <p class="shopping-item__size">L</p>
+                                            <p class="shopping-item__size">XL</p>
+                                        </div>
+                                        <div class="shopping-item__previews">
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image2.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="">
+                                            </picture>
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image2.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="">
+                                            </picture>
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image2.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="">
+                                            </picture>
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image2.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <img src="./images/image2.png" class="shopping-image_image" alt="">
+                            <div class="add-item__wrapper">
+                                <div class="add-item work-sans-font">Add item</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="shopping-item__header">Name 1</div>
+                        <div class="shopping-item__pricing">
+                            <p class="shopping-item__discount">$100</p>
+                            <p class="shopping-item__price">$100</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping-item">
+                    <div class="shopping-item_image-wrapper">
+                        <div class="image-container">
+                            <div class="image_discount-tag-sale-wrapper">
+                                <div class="image_discount-tag-sale-container">
+                                    <p>Sale</p>
+                                </div>
+                            </div>
+                            <div class="shopping-item__actions-wrapper">
+                                <div class="shopping-item__actions-container">
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-share"></i>
+                                    </div>
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="shopping-item__other-wrapper">
+                                <div class="shopping-item__other-container">
+                                    <div class="shopping-item__sizes-wrapper">
+                                        <div class="shopping-item__sizes">
+                                            <p class="shopping-item__size">S</p>
+                                            <p class="shopping-item__size">M</p>
+                                            <p class="shopping-item__size">L</p>
+                                        </div>
+                                        <div class="shopping-item__previews">
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image3.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="">
+                                            </picture>
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image3.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <img src="./images/image3.png" class="shopping-image_image" alt="">
+                            <div class="add-item__wrapper">
+                                <div class="add-item">Add item</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="shopping-item__header">Name 1</div>
+                        <div class="shopping-item__pricing">
+                            <p class="shopping-item__discount">$100</p>
+                            <p class="shopping-item__price">$100</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="shopping-item">
+                    <div class="shopping-item_image-wrapper">
+                        <div class="image-container">
+                            <div class="image_discount-tag-sale-wrapper">
+                                <div class="image_discount-tag-sale-container">
+                                    <p>Sale</p>
+                                </div>
+                            </div>
+                            <div class="shopping-item__actions-wrapper">
+                                <div class="shopping-item__actions-container">
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-search"></i>
+                                    </div>
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-share"></i>
+                                    </div>
+                                    <div class="shopping-item__action">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="shopping-item__other-wrapper">
+                                <div class="shopping-item__other-container">
+                                    <div class="shopping-item__sizes-wrapper">
+                                        <div class="shopping-item__sizes">
+                                            <p class="shopping-item__size">S</p>
+                                            <p class="shopping-item__size">M</p>
+                                            <p class="shopping-item__size">L</p>
+                                        </div>
+                                        <div class="shopping-item__previews">
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image3.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="">
+                                            </picture>
+                                            <picture class="other-image-preview">
+                                                <img src="./images/image3.png" width="22px" style="flex-shrink: 0;"
+                                                    alt="">
+                                            </picture>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <img src="./images/image3.png" class="shopping-image_image" alt="">
+                            <div class="add-item__wrapper">
+                                <div class="add-item">Add item</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div>
+                        <div class="shopping-item__header">Name 1</div>
+                        <div class="shopping-item__pricing">
+                            <p class="shopping-item__discount">$100</p>
+                            <p class="shopping-item__price">$100</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class='main-banner-container'>
+            <img src="./images/banner-image.jpg" class="main-banner-width" alt="">
+            <div class="main-banner-tags">
+                <p>#summer</p>
+                <p>#cool</p>
+                <p>#shop</p>
+            </div>
+            <p class="main-banner-header">Up To 40% Off Final Sale Items. Caught in the moment!</p>
+            <div class="shop-button">SHOP NOW</div>
+        </section>
+
+    </main>
+
+    <footer class="footer-block">
+        <div class="footer_line">
+            <div class="footer_line_links">
+                <p class="footer_line_link">Search</p>
+                <p class="footer_line_link">About</p>
+                <p class="footer_line_link">Store locations</p>
+                <p class="footer_line_link">Contacts</p>
+                <p class="footer_line_link">Support</p>
+                <p class="footer_line_link">Policy</p>
+                <p class="footer_line_link">Faqs</p>
+            </div>
+            <div class="footer_line_social-nets">
+                <i class="fab fa-twitter footer_line_social-net"></i>
+                <i class="fab fa-instagram footer_line_social-net"></i>
+                <i class="fab fa-google footer_line_social-net"></i>
+                <i class="fab fa-youtube footer_line_social-net"></i>
+                <i class="fab fa-facebook-f footer_line_social-net"></i>
+            </div>
+        </div>
+        <div class="footer_line">
+            <p class="footer_line_legal">
+                © 2018 Commerce Factory. All Rights Reserved | (+00) 123 567990 | contact@alvacommerce.com
+            </p>
+            <picture>
+                <img src="./images/paypal.svg" alt="">
+                <img src="./images/banking-system-2.svg" alt="">
+                <img src="./images/visa.svg" alt="">
+                <img src="./images/mastercard.svg" alt="">
+                <img src="./images/maestro.svg" alt="">
+                <img src="./images/banking-system-1.svg" alt="">
+            </picture>
+        </div>
+    </footer>
+
+</body>
+
+</html>

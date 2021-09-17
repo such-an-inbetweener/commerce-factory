@@ -1,0 +1,24 @@
+body{
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Work Sans', sans-serif;
+}
+
+.menu__paragraph {
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+}
+
+@media screen and (min-width: 320px) and (max-width: 425px) {
+    .no-mobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .no-pc {
+        display: none;
+    }
+}
